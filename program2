@@ -1,0 +1,16 @@
+# Step 1: Install and load ggplot2
+install.packages("ggplot2")
+library(ggplot2)
+
+# Step 2: Load and view the mtcars dataset
+data(mtcars)
+head(mtcars)
+
+# Step 3: Create a Q-Q plot for mpg
+ggplot(data = mtcars, aes(sample = mpg)) +
+  stat_qq() +
+  stat_qq_line() +
+  labs(title = "Q-Q plot for MPG",
+       x = "Theoretical Quantiles",
+       y = "MPG (sample)") +
+  theme_minimal()
