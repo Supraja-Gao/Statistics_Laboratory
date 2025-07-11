@@ -1,3 +1,4 @@
+install.packages("stats")
 # Load Library
 library(stats)
 
