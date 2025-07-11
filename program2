@@ -14,3 +14,7 @@ ggplot(data = mtcars, aes(sample = mpg)) +
        x = "Theoretical Quantiles",
        y = "MPG (sample)") +
   theme_minimal()
+
+correlation<-cor.test(mtcars$mpg,mtcars$hp)
+cat("Correlation bw hp and mpg is:",round(correlation$estimate,2),"\n")
+cat("P-value of correlation test is:",round(correlation$p.value,4),"\n")
