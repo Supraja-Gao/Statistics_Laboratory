@@ -7,3 +7,14 @@ spearman_corr <- cor(SMIP, DBMS, method = "spearman")
 
 # Print the result rounded to 3 decimal places
 print(paste("Spearman rank correlation :", round(spearman_corr, 3)))
+
+#Scores of 11 students in SMIP and DBMS
+SMIP <- c(70, 46, 94, 34, 20, 86, 18, 12, 56, 64, 42)
+DBMS <- c(60, 66, 90, 46, 16, 98, 24, 8, 32, 54, 62)
+
+# Perform Spearman correlation test
+spearman_test <- cor.test(SMIP, DBMS, method = "spearman")
+
+# Print Spearman correlation and p-value
+cat("Spearman rank correlation:", round(spearman_test$estimate, 3), "\n")
+cat("P-value:", round(spearman_test$p.value, 4), "\n")
