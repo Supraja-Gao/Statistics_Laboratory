@@ -12,7 +12,11 @@ library(readr)
 
 # Step 3: Load dataset
 df <- read.csv("C:/Users/Supraja/Downloads/pricequotes.csv")
-
+cat("Barry price summary")
+cat(df$Barry.Price)
+cat("Standard deviation:",sd(df$Barry.Price))
+cat("Mary price summary:")
+cat(df$Mary.Price)
 print(summary(df))
 boxplot(df$Barry.Price,df$Mary.Price,
         names=c("Barry","Mary"),
